@@ -1,0 +1,22 @@
+{
+  "name": "domainlogger",
+  "version": "1.0.0",
+  "description": "Chrome Extension to Log Your Most Used Domains",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/faizak1/DomainLogger.git"
+  },
+  "author": "Faiza Khan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/faizak1/DomainLogger/issues"
+  },
+  "homepage": "https://github.com/faizak1/DomainLogger#readme",
+  "devDependencies": {
+    "jest": "^29.4.3"
+  }
+}

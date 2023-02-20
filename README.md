@@ -10,3 +10,14 @@ Problem Statement: While iPhone and Macs typically have screentime data, they do
 
 Solution: When you start the browser window, from that point 'domain-logger' monitors your tabs and domain activity in that window. It logs the duration of each domain you are visiting. When you actively visit a tab, the timer for that domain will keep going, until you switch to another tab with a different domain (at that point the timer will start for that new domain). Ultimately, the user should be able to see which domains they spent the longest time in during the past 24 hours. It solves the problem at hand since the user will now be more aware of which domains they spend the most time on, which can help them become more productive with their screen time.  
  
+## How to Run The Extension
+1. Download this repo
+2. Go to chrome://extensions/
+3. Turn on the "Developer Mode" toggle on the top right corner
+4. Click on "load unpacked" and select the folder which has this extension
+5. Open a new tab and click on the "Extensions" gear on the top right corner of the chrome window
+6. Click on "Domain Logger" to see the list of domains you have open in that window along with the number of tabs associated with that domain
+
+## Sample Output of the Extension (thus far)
+<img src = "./Homework3_DomainLoggerSampleOutput">
+
