@@ -18,6 +18,7 @@ Solution: When you start the browser window, from that point 'domain-logger' mon
 5. Open a new tab and click on the "Extensions" gear on the top right corner of the chrome window
 6. Click on "Domain Logger" to see the list of domains you have open in that window along with the number of tabs associated with that domain
 
-## Sample Output of the Extension (thus far)
-<img src = "./Homework3_DomainLoggerSampleOutput">
+## Sample Output of the Domain Logger Chrome Extension (thus far)
+As you can see, the websites are in lexicographical order, the "visits" attribute shows the number of tabs for that domain. The remaining features will be added in the next iterations of the project. 
+<img width="1430" alt="Homework 3" src="https://user-images.githubusercontent.com/52360459/219991346-88b258bb-5ebb-4a92-80d5-db3791421628.png">
 
