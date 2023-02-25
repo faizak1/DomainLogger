@@ -1,7 +1,8 @@
-const sortTabs = require('../popup').sortTabs;
-const { browser } = require('webextension-polyfill');
+const sortTabs = require('domainlogger').sortTabs;
+const {chrome} = require('jest-chrome');
+// const { browser } = require('webextension-polyfill');
 
-global.browser = browser;
+// global.browser = browser;
 
 /*global.chrome = {
     browserAction: {
@@ -9,30 +10,11 @@ global.browser = browser;
     }
  };*/ 
 
-jest.mock('chrome', () => ({
-  tabs: {
-    query: (params, callback) => {
-      const tabs = [
-        { id: 1, url: 'http://example.com' },
-        { id: 2, url: 'http://example.com/page2' },
-        { id: 3, url: 'http://example.com/page3' },
-      ];
-      callback(tabs);
-    },
-  },
-}));
-
-describe('popup', () => {
-  it('should sort tabs by URL', () => {
-  });
-});
-
 
 describe('test', () => {
-      // Mock the chrome.tabs.query() call
-      browser.tabs.query = jest.fn().mockImplementation((params, callback) => {
-        callback(tabs);
-      });
+  // Mock the chrome.tabs.query() call
+  const browserTabs = chrome.tabs;
+
   it('should sort tabs by URL', () => {
     // Create an array of tabs to pass to the sortTabs() function
     const tabs = [
@@ -41,19 +23,19 @@ describe('test', () => {
       { url: 'https://www.facebook.com' },
     ];
 
-    // Call the sortTabs() function with the tabs array
-    const sortedTabs = tabs.sort(sortTabs);
+    // create tabs
+    tabs.forEach((tab) => {
+      chrome.tabs.create(tab);
+    });
 
-    // Check that the tabs are sorted in the expected order
-    expect(sortedTabs[0].url).toBe('https://www.amazon.com');
-    expect(sortedTabs[1].url).toBe('https://www.facebook.com');
-    expect(sortedTabs[2].url).toBe('https://www.google.com');
+    // Call the sortTabs() function
+    sortTabs(chrome);
 
-
-    const sortedTabs2 = sortTabs();
-
-    expect(sortedTabs2[0].url).toBe('https://www.amazon.com');
-    expect(sortedTabs2[1].url).toBe('https://www.facebook.com');
-    expect(sortedTabs2[2].url).toBe('https://www.google.com');
+    chrome.tabs.query({windowId: chrome.windows.WINDOW_ID_CURRENT}, (sortedTabs) => {
+      // Check that the tabs are sorted in the expected order
+      expect(sortedTabs[0].url).toBe('https://www.amazon.com');
+      expect(sortedTabs[1].url).toBe('https://www.facebook.com');
+      expect(sortedTabs[2].url).toBe('https://www.google.com');
+      });
   });
 });
