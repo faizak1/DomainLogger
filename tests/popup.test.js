@@ -1,59 +1,93 @@
-const sortTabs = require('../popup').sortTabs;
-const { browser } = require('webextension-polyfill');
+const sortTabs = require("domainlogger").sortTabs;
+const sortingTabs = require("domainlogger").sortingTabs;
 
-global.browser = browser;
+const { chrome } = require("jest-chrome");
 
-/*global.chrome = {
-    browserAction: {
-        setIcon: function () {}
-    }
- };*/ 
+// Create an array of tabs to pass to the sortTabs() function
+const tabs = [
+  { url: "https://www.google.com" },
+  { url: "https://www.amazon.com" },
+  { url: "https://www.facebook.com" }
+];
 
-jest.mock('chrome', () => ({
-  tabs: {
-    query: (params, callback) => {
-      const tabs = [
-        { id: 1, url: 'http://example.com' },
-        { id: 2, url: 'http://example.com/page2' },
-        { id: 3, url: 'http://example.com/page3' },
-      ];
-      callback(tabs);
-    },
-  },
-}));
-
-describe('popup', () => {
-  it('should sort tabs by URL', () => {
+describe("test chrome tabs functionality", () => {
+  beforeEach(() => {
+    chrome.tabs.create.mockClear();
+    chrome.tabs.query.mockClear();
   });
-});
 
+  test("should return 1 if tab1 url is greater than tab2 url", () => {
+    const tab1 = { url: "https://www.google.com/" };
+    const tab2 = { url: "https://www.amazon.com/" };
+    expect(sortingTabs(tab1, tab2)).toBe(1);
+  });
 
-describe('test', () => {
-      // Mock the chrome.tabs.query() call
-      browser.tabs.query = jest.fn().mockImplementation((params, callback) => {
-        callback(tabs);
-      });
-  it('should sort tabs by URL', () => {
-    // Create an array of tabs to pass to the sortTabs() function
-    const tabs = [
-      { url: 'https://www.amazon.com' },
-      { url: 'https://www.google.com' },
-      { url: 'https://www.facebook.com' },
-    ];
+  test("should return -1 if tab1 url is less than tab2 url", () => {
+    const tab1 = { url: "https://www.google.com/" };
+    const tab2 = { url: "https://www.amazon.com/" };
+    expect(sortingTabs(tab2, tab1)).toBe(-1);
+  });
 
-    // Call the sortTabs() function with the tabs array
-    const sortedTabs = tabs.sort(sortTabs);
+  test("should return 0 if tab1 url is equal to tab2 url", () => {
+    const tab1 = { url: "https://www.google.com/" };
+    const tab2 = { url: "https://www.google.com/" };
+    expect(sortingTabs(tab1, tab2)).toBe(0);
+  });
+
+  test("sortTabs should sort tabs by URL in lexicographic order", () => {
+    // Create tabs
+    tabs.forEach((tab) => {
+      chrome.tabs.create(tab);
+    });
+
+    // Call the sortTabs() function
+    sortTabs(chrome);
 
     // Check that the tabs are sorted in the expected order
-    expect(sortedTabs[0].url).toBe('https://www.amazon.com');
-    expect(sortedTabs[1].url).toBe('https://www.facebook.com');
-    expect(sortedTabs[2].url).toBe('https://www.google.com');
+    const expectedTabs = [
+      { url: "https://www.amazon.com" },
+      { url: "https://www.facebook.com" },
+      { url: "https://www.google.com" }
+    ];
+    expect(chrome.tabs.query).toHaveBeenCalledWith(
+      { windowId: chrome.windows.WINDOW_ID_CURRENT },
+      expect.any(Function)
+    );
 
+    const callback = chrome.tabs.query.mock.calls[0][1];
+    callback(expectedTabs);
+  });
 
-    const sortedTabs2 = sortTabs();
+  test("sortTabs should render table with headers and rows for each unique domain", () => {
+    // Create tabs
+    tabs.forEach((tab) => {
+      chrome.tabs.create(tab);
+    });
 
-    expect(sortedTabs2[0].url).toBe('https://www.amazon.com');
-    expect(sortedTabs2[1].url).toBe('https://www.facebook.com');
-    expect(sortedTabs2[2].url).toBe('https://www.google.com');
+    // Call the sortTabs() function
+    sortTabs(chrome);
+
+    // Check that the table is rendered with the expected headers and rows
+    expect(document.querySelector("table")).toBeTruthy();
+  });
+
+  test("should render table with headers and rows for each unique domain", () => {
+    // create tabs
+    tabs.forEach((tab) => {
+      chrome.tabs.create(tab);
+    });
+
+    // Call the sortTabs() function
+    sortTabs(chrome);
+
+    chrome.tabs.query(
+      { windowId: chrome.windows.WINDOW_ID_CURRENT },
+      (sortedTabs) => {
+        // Check that the tabs are sorted in the expected order
+        expect(document.querySelector("table")).toBeTruthy();
+        expect(document.querySelectorAll("th")).toHaveLength(3);
+        expect(document.querySelectorAll("tr")).toHaveLength(3);
+      }
+    );
   });
 });

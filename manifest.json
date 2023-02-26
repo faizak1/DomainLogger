@@ -1,10 +1,10 @@
 {
-    "manifest_version": 2,
-    "name": "Domain Logger",
-    "version": "1.0.0",
-    "description": "Your websites, number of tabs, and time spent on each!",
-    "permissions": ["tabs"],
-    "browser_action": {
-        "default_popup": "popup.html"
-    }
+  "manifest_version": 2,
+  "name": "Domain Logger",
+  "version": "1.0.1",
+  "description": "Your websites, number of tabs, and time spent on each!",
+  "permissions": ["tabs"],
+  "browser_action": {
+    "default_popup": "popup.html"
+  }
 }
