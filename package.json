@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest",
     "prettier": "prettier --config .prettierrc --write .",
-    "eslint": "eslint ."
+    "eslint": "eslint .",
+    "build": "babel src -d lib"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
   "homepage": "https://github.com/faizak1/DomainLogger#readme",
   "devDependencies": {
     "eslint": "^8.34.0",
+    "eslint-plugin-react": "^7.32.2",
     "jest": "^27",
     "jest-chrome": "^0.8.0",
     "jest-environment-jsdom": "^27.5.1"

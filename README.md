@@ -1,8 +1,9 @@
 # DomainLogger
 Chrome Extension to Log Your Most Used Domains
 
-<img src = "https://img.shields.io/github/license/faizak1/DomainLogger"> 
-<img src = "https://img.shields.io/github/issues/faizak1/DomainLogger">
+<img src = "https://img.shields.io/github/license/faizak1/DomainLogger"> <img src = "https://img.shields.io/github/issues/faizak1/DomainLogger">
+![Build Status](https://github.com/faizak1/DomainLogger/actions/workflows/build.yml/badge.svg)
+[![codecov](https://codecov.io/gh/faizak1/DomainLogger/branch/main/graph/badge.svg?token=cde5d698-c560-4f4d-a0bf-bb4b64a09271)](https://codecov.io/gh/faizak1/DomainLogger)
 
 ## Overview
 This Chrome extension acts as an activity log by indicating how long a user spends on each domain site (Github, Amazon, Youtube, Courseworks, etc).
