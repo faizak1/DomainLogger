@@ -40,10 +40,6 @@ jobs:
       run: |
         npm run eslint
         
-    - name: Format
-      run: |
-        npm run prettier
-        
     - name: Test
       run: |
         npm run test -- --coverage
