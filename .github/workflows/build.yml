@@ -40,9 +40,13 @@ jobs:
       run: |
         npm run eslint
         
+    - name: Format
+      run: |
+        npm run prettier
+        
     - name: Test
       run: |
-        npm run test
+        npm run test -- --coverage
         
     - name: Upload coverage reports to Codecov
       uses: codecov/codecov-action@v1
