@@ -51,7 +51,7 @@ describe("sortTabs", () => {
     expect(headers.length).toBe(3);
     expect(headers[0].textContent).toBe("WEBSITES");
     expect(headers[1].textContent).toBe("VISITS");
-    expect(headers[2].textContent).toBe("TIME SPENT");
+    expect(headers[2].textContent).toBe("DELETE TABS");
 
     const rows = table.querySelectorAll("tr");
     expect(rows.length).toBe(4); // One row for each unique domain
