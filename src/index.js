@@ -125,7 +125,6 @@ function sortTabs(tabs) {
           col3.appendChild(document.createTextNode("Delete "));
           col3.appendChild(a);
           col3.style.border = '1px solid black';
-
           
         }
 
