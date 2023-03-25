@@ -26,12 +26,12 @@ function sortTabs(tabs) {
 
       // Add headers for the popup: "Websites", "Visits/Tabs", and "Delete Tabs"
       var bold = document.createElement("STRONG");
-      var header1 = document.createTextNode("WEBSITES");
+      var header1 = document.createTextNode("DOMAINS");
       bold.appendChild(header1);
       col1.appendChild(document.body.appendChild(bold));
 
       var bold2 = document.createElement("STRONG");
-      var header2 = document.createTextNode("VISITS");
+      var header2 = document.createTextNode("VISITS/TAB COUNT");
       bold2.appendChild(header2);
       col2.appendChild(document.body.appendChild(bold2));
 
@@ -42,6 +42,8 @@ function sortTabs(tabs) {
 
       col1.style.border = '1px solid black';
       col2.style.border = '1px solid black';
+      col3.style.border = '1px solid black';
+
 
       // All domains in the tabs list have at least 1 tab open with that domain
       countVisits = 1;
