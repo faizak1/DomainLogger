@@ -1,5 +1,5 @@
-const sortTabs = require("domainlogger").sortTabs;
-const sortingTabs = require("domainlogger").sortingTabs;
+const sortTabs = require("domain-logger-delete-tabs-by-domain").sortTabs;
+const sortingTabs = require("domain-logger-delete-tabs-by-domain").sortingTabs;
 
 const { chrome } = require("jest-chrome");
 

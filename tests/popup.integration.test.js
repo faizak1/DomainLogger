@@ -1,5 +1,5 @@
 const assert = require("assert");
-const sortTabs = require("domainlogger").sortTabs;
+const sortTabs = require("domain-logger-delete-tabs-by-domain").sortTabs;
 
 const { chrome } = require("jest-chrome");
 
