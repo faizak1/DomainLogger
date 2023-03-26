@@ -5,6 +5,7 @@ Chrome Extension to Delete Tabs by Domain, and to See a Log Table showing Each P
 <img src = "https://img.shields.io/github/license/faizak1/DomainLogger"> <img src = "https://img.shields.io/github/issues/faizak1/DomainLogger">
 ![Build Status](https://github.com/faizak1/DomainLogger/actions/workflows/build.yml/badge.svg)
 [![codecov](https://codecov.io/github/faizak1/DomainLogger/branch/main/graph/badge.svg?token=RUW388KYJF)](https://codecov.io/github/faizak1/DomainLogger)
+[![npm](https://img.shields.io/npm/v/domain-logger-delete-tabs-by-domain)](https://www.npmjs.com/package/domain-logger-delete-tabs-by-domain)
 
 ## Overview
 
