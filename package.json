@@ -1,6 +1,6 @@
 {
-  "name": "domainlogger",
-  "version": "1.0.0",
+  "name": "domain-logger",
+  "version": "0.1.1",
   "description": "Chrome Extension to Log Your Most Used Domains",
   "main": "src/index.js",
   "scripts": {
