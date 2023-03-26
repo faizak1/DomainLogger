@@ -49,8 +49,8 @@ describe("sortTabs", () => {
 
     const headers = table.querySelectorAll("strong");
     expect(headers.length).toBe(3);
-    expect(headers[0].textContent).toBe("WEBSITES");
-    expect(headers[1].textContent).toBe("VISITS");
+    expect(headers[0].textContent).toBe("DOMAINS");
+    expect(headers[1].textContent).toBe("VISITS/TAB COUNT");
     expect(headers[2].textContent).toBe("DELETE TABS");
 
     const rows = table.querySelectorAll("tr");
