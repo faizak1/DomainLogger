@@ -18,6 +18,9 @@
     "react/jsx-uses-vars": "error",
     "no-unused-vars": "off",
     "no-undef": "off",
-    "no-redeclare": "off"
+    "no-redeclare": "off",
+    "no-useless-escape": "off",
+    "no-prototype-builtins": "off",
+    "no-cond-assign": "off"  
   }
 }
