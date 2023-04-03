@@ -1,5 +1,5 @@
 const assert = require("assert");
-const sortTabs = require("domain-logger-delete-tabs-by-domain").sortTabs;
+const deleteTabs = require("domain-logger-delete-tabs-by-domain").deleteTabs;
 
 const { chrome } = require("jest-chrome");
 
@@ -13,7 +13,7 @@ const tabs = [
   { url: "https://www.facebook.com/messages" }
 ];
 
-describe("sortTabs", () => {
+describe("deleteTabs", () => {
   beforeEach(() => {
     // Mock chrome.tabs.query to return sample tabs
     chrome.tabs.query = jest.fn((options, callback) => {
@@ -35,7 +35,7 @@ describe("sortTabs", () => {
     const body = document.createElement("body");
     document.body = body;
 
-    sortTabs(chrome);
+    deleteTabs(chrome);
 
     // Check that chrome.tabs.query was called with the correct options
     expect(chrome.tabs.query).toHaveBeenCalledWith(

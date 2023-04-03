@@ -1,4 +1,4 @@
-const sortTabs = require("domain-logger-delete-tabs-by-domain").sortTabs;
+const deleteTabs = require("domain-logger-delete-tabs-by-domain").deleteTabs;
 const sortingTabs = require("domain-logger-delete-tabs-by-domain").sortingTabs;
 
 const { chrome } = require("jest-chrome");
@@ -41,7 +41,7 @@ describe("test chrome tabs functionality", () => {
     });
 
     // Call the sortTabs() function
-    sortTabs(chrome);
+    deleteTabs(chrome);
 
     // Check that the tabs are sorted in the expected order
     const expectedTabs = [
@@ -65,7 +65,7 @@ describe("test chrome tabs functionality", () => {
     });
 
     // Call the sortTabs() function
-    sortTabs(chrome);
+    deleteTabs(chrome);
 
     // Check that the table is rendered with the expected headers and rows
     expect(document.querySelector("table")).toBeTruthy();
@@ -78,7 +78,7 @@ describe("test chrome tabs functionality", () => {
     });
 
     // Call the sortTabs() function
-    sortTabs(chrome);
+    deleteTabs(chrome);
 
     chrome.tabs.query(
       { windowId: chrome.windows.WINDOW_ID_CURRENT },
