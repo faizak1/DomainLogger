@@ -15,7 +15,7 @@ function sortingTabs(tab1, tab2) {
 
 /**
  * This function uses Chrome Tabs API to log the tab domains, get the number of tabs for each parent domain, and gives option to user to delete tabs by domain.
- * The event listener within this method extracts the text the user clicks on, so that they can delete tabs by domain name. 
+ * The event listener within this method extracts the text the user clicks on to allow users to delete tabs by domain name. 
  * @param {*} tabs The tabs open in current Chrome window 
  */
 function deleteTabs(tabs) {
