@@ -49,3 +49,12 @@ jobs:
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           coverage: 85
+
+      - name: Generate documentation
+        run: npm run build-docs
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.PERSONAL_TOKEN }}
+          publish_dir: ./docs
