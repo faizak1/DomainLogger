@@ -55,15 +55,7 @@ After unpacking the extension using the installation steps above, click on the "
 
 ## Functionality Demonstration Example (Sample Output)
 
-As you can see, the websites are in lexicographical order in the "domain" column, the "visits/tabs" column shows the number of tabs for that domain, and the "delete tabs" feature allows users to delete all tabs of the particular domains. 
+As you can see, the websites are in lexicographical order in the "domain" column, the "visits/tabs" column shows the number of tabs for that domain, and the "delete tabs" feature allows users to delete all tabs of the particular domains. In this video example, there were 3 Youtube tabs in the initial "before" output as shown in the extension. As expected, all 3 of the Youtube tabs were deleted in just one click after clicking the link "Delete w<span>ww.</span>youtube.com". After clicking on the Domain Logger extension again, we can see that youtube entry has been removed from the table as shown in the "after" output. 
 
-<strong> Here is a sample initial output BEFORE clicking "Delete w<span>ww.</span>youtube.com" </strong>
+https://user-images.githubusercontent.com/52360459/229962303-33b6db0d-d3a0-42fe-a586-c7cae5e32155.mov
 
-<img width="1431" alt="HW6_OutputBeforeDeleteYoutubeTabs" src="https://user-images.githubusercontent.com/52360459/227747678-ec13fe65-13c0-4c40-8c79-bb85ab6d49d4.png">
-
-<br> </br>
-<strong> Here is a sample output AFTER clicking "Delete w<span>ww.</span>youtube.com" </strong>
-
-<img width="1432" alt="HW6_OutputAfterDeleteYoutubeTabs" src="https://user-images.githubusercontent.com/52360459/227747686-785b85fd-1688-47c6-91f2-c29c63e7a851.png">
-
-As you can see, there were 3 Youtube tabs in the initial "before" output as shown in the extension. As expected, all 3 of the Youtube tabs were deleted in just one click after clicking the link "Delete w<span>ww.</span>youtube.com". After clicking on the Domain Logger extension again, we can see that youtube entry has been removed from the table as shown in the "after" output. 
