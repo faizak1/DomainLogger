@@ -1,437 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>JSDoc: Global</title>
 
-    <script src="scripts/prettify/prettify.js"> </script>
-    <script src="scripts/prettify/lang-css.js"> </script>
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
     <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
-    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
-</head>
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="styles/prettify-tomorrow.css"
+    />
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css" />
+  </head>
 
-<body>
+  <body>
+    <div id="main">
+      <h1 class="page-title">Global</h1>
 
-<div id="main">
+      <section>
+        <header>
+          <h2></h2>
+        </header>
 
-    <h1 class="page-title">Global</h1>
+        <article>
+          <div class="container-overview">
+            <dl class="details"></dl>
+          </div>
 
-    
+          <h3 class="subsection-title">Methods</h3>
 
+          <h4 class="name" id="deleteTabs">
+            <span class="type-signature"></span>deleteTabs<span
+              class="signature"
+              >(tabs)</span
+            ><span class="type-signature"></span>
+          </h4>
 
+          <div class="description">
+            This function uses Chrome Tabs API to log the tab domains, get the
+            number of tabs for each parent domain, and gives option to user to
+            delete tabs by domain. The event listener within this method
+            extracts the text the user clicks on, so that they can delete tabs
+            by domain name.
+          </div>
 
+          <h5>Parameters:</h5>
 
-<section>
+          <table class="params">
+            <thead>
+              <tr>
+                <th>Name</th>
 
-<header>
-    
-        <h2></h2>
-        
-    
-</header>
+                <th>Type</th>
 
-<article>
-    <div class="container-overview">
-    
-        
+                <th class="last">Description</th>
+              </tr>
+            </thead>
 
-        
+            <tbody>
+              <tr>
+                <td class="name"><code>tabs</code></td>
 
+                <td class="type">
+                  <span class="param-type">*</span>
+                </td>
 
-<dl class="details">
+                <td class="description last">
+                  The tabs open in current Chrome window
+                </td>
+              </tr>
+            </tbody>
+          </table>
 
-    
+          <dl class="details">
+            <dt class="tag-source">Source:</dt>
+            <dd class="tag-source">
+              <ul class="dummy">
+                <li>
+                  <a href="index.js.html">index.js</a>,
+                  <a href="index.js.html#line21">line 21</a>
+                </li>
+              </ul>
+            </dd>
+          </dl>
 
-    
+          <h4 class="name" id="sortingTabs">
+            <span class="type-signature"></span>sortingTabs<span
+              class="signature"
+              >(tab1, tab2)</span
+            ><span class="type-signature"></span>
+          </h4>
 
-    
+          <div class="description">
+            This function takes two tabs as parameters at a time, and sorts them
+            in lexicographic order to present the domains in alphabetical order
+            in the Chrome Extension table
+          </div>
 
-    
+          <h5>Parameters:</h5>
 
-    
+          <table class="params">
+            <thead>
+              <tr>
+                <th>Name</th>
 
-    
+                <th>Type</th>
 
-    
+                <th class="last">Description</th>
+              </tr>
+            </thead>
 
-    
+            <tbody>
+              <tr>
+                <td class="name"><code>tab1</code></td>
 
-    
+                <td class="type">
+                  <span class="param-type">*</span>
+                </td>
 
-    
+                <td class="description last">
+                  The first tab to compare, to sort lexicographically
+                </td>
+              </tr>
 
-    
+              <tr>
+                <td class="name"><code>tab2</code></td>
 
-    
+                <td class="type">
+                  <span class="param-type">*</span>
+                </td>
 
-    
+                <td class="description last">
+                  The second tab to compare, to sort lexicographically
+                </td>
+              </tr>
+            </tbody>
+          </table>
 
-    
+          <dl class="details">
+            <dt class="tag-source">Source:</dt>
+            <dd class="tag-source">
+              <ul class="dummy">
+                <li>
+                  <a href="index.js.html">index.js</a>,
+                  <a href="index.js.html#line7">line 7</a>
+                </li>
+              </ul>
+            </dd>
+          </dl>
 
-    
+          <h5>Returns:</h5>
 
-    
-</dl>
-
-
-        
-    
+          <div class="param-desc">
+            The tab that is lexicographically higher (to be sorted on the higher
+            end)
+          </div>
+        </article>
+      </section>
     </div>
 
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3 class="subsection-title">Methods</h3>
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="deleteTabs"><span class="type-signature"></span>deleteTabs<span class="signature">(tabs)</span><span class="type-signature"></span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    This function uses Chrome Tabs API to log the tab domains, get the number of tabs for each parent domain, and gives option to user to delete tabs by domain.
-The event listener within this method extracts the text the user clicks on, so that they can delete tabs by domain name.
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>tabs</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">*</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The tabs open in current Chrome window</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="index.js.html">index.js</a>, <a href="index.js.html#line21">line 21</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="sortingTabs"><span class="type-signature"></span>sortingTabs<span class="signature">(tab1, tab2)</span><span class="type-signature"></span></h4>
-    
-
-    
-
-
-
-<div class="description">
-    This function takes two tabs as parameters at a time, and sorts them in lexicographic order to present the domains in alphabetical order in the Chrome Extension table
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>tab1</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">*</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The first tab to compare, to sort lexicographically</td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>tab2</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">*</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last">The second tab to compare, to sort lexicographically</td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="index.js.html">index.js</a>, <a href="index.js.html#line7">line 7</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-<div class="param-desc">
-    The tab that is lexicographically higher (to be sorted on the higher end)
-</div>
-
-
-
-    
-
-
-
-
-
-        
-    
-
-    
-
-    
-</article>
-
-</section>
-
-
-
-
-</div>
-
-<nav>
-    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#deleteTabs">deleteTabs</a></li><li><a href="global.html#sortingTabs">sortingTabs</a></li></ul>
-</nav>
-
-<br class="clear">
-
-<footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a> on Sun Apr 02 2023 18:50:00 GMT-0400 (Eastern Daylight Time)
-</footer>
-
-<script> prettyPrint(); </script>
-<script src="scripts/linenumber.js"> </script>
-</body>
+    <nav>
+      <h2><a href="index.html">Home</a></h2>
+      <h3>Global</h3>
+      <ul>
+        <li><a href="global.html#deleteTabs">deleteTabs</a></li>
+        <li><a href="global.html#sortingTabs">sortingTabs</a></li>
+      </ul>
+    </nav>
+
+    <br class="clear" />
+
+    <footer>
+      Documentation generated by
+      <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a> on Sun Apr 02
+      2023 18:50:00 GMT-0400 (Eastern Daylight Time)
+    </footer>
+
+    <script>
+      prettyPrint();
+    </script>
+    <script src="scripts/linenumber.js"></script>
+  </body>
 </html>

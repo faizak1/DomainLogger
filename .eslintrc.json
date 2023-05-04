@@ -13,7 +13,7 @@
     "sourceType": "module"
   },
   "rules": {
-    "no-console": "warn",
+    "no-console": "off",
     "react/jsx-uses-react": "error",
     "react/jsx-uses-vars": "error",
     "no-unused-vars": "off",
@@ -21,6 +21,6 @@
     "no-redeclare": "off",
     "no-useless-escape": "off",
     "no-prototype-builtins": "off",
-    "no-cond-assign": "off"  
+    "no-cond-assign": "off"
   }
 }
