@@ -6,6 +6,7 @@ Chrome Extension to Delete Tabs by Domain, and to See a Log Table showing Each P
 ![Build Status](https://github.com/faizak1/DomainLogger/actions/workflows/build.yml/badge.svg)
 [![codecov](https://codecov.io/github/faizak1/DomainLogger/branch/main/graph/badge.svg?token=RUW388KYJF)](https://codecov.io/github/faizak1/DomainLogger)
 [![npm](https://img.shields.io/npm/v/domain-logger-delete-tabs-by-domain)](https://www.npmjs.com/package/domain-logger-delete-tabs-by-domain)
+[![JSDoc Documentation](https://img.shields.io/badge/docs-jsdoc-blue.svg)](https://faizak1.github.io/DomainLogger/index.html)
 
 ## Overview
 
@@ -57,5 +58,4 @@ After unpacking the extension using the installation steps above, click on the "
 
 As you can see, the websites are in lexicographical order in the "domain" column, the "visits/tabs" column shows the number of tabs for that domain, and the "delete tabs" feature allows users to delete all tabs of the particular domains. In this video example, there were 3 Youtube tabs in the initial "before" output as shown in the extension. As expected, all 3 of the Youtube tabs were deleted in just one click after clicking the link "Delete w<span>ww.</span>youtube.com". After clicking on the Domain Logger extension again, we can see that youtube entry has been removed from the table as shown in the "after" output. 
 
-https://user-images.githubusercontent.com/52360459/229962303-33b6db0d-d3a0-42fe-a586-c7cae5e32155.mov
-
+https://user-images.githubusercontent.com/52360459/236107509-4dfebe5b-5c1a-404f-a810-b9952b5ab05f.mov
