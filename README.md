@@ -1,4 +1,4 @@
-# DomainLogger
+# Domain Logger - Delete Tabs By Domain
 
 Chrome Extension to Delete Tabs by Domain, and to See a Log Table showing Each Parent Domain and its Corresponding Number of Tabs within a Chrome Window
 
