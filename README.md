@@ -55,6 +55,10 @@ For more information on testing using jest, click [here](https://jestjs.io/)
 
 After unpacking the extension using the installation steps above, click on the "Delete" link for the domain you wish to delete, to get rid of all open tabs under that domain.
 
+## Link to Documentation Site
+
+Please visit https://faizak1.github.io/DomainLogger/index.html for details of this Chrome Extension.
+
 ## Functionality Demonstration Example (Sample Output)
 
 As you can see, the websites are in lexicographical order in the "domain" column, the "visits/tabs" column shows the number of tabs for that domain, and the "delete tabs" feature allows users to delete all tabs of the particular domains. In this video example, there were 3 Youtube tabs in the initial "before" output as shown in the extension. As expected, all 3 of the Youtube tabs were deleted in just one click after clicking the link "Delete w<span>ww.</span>youtube.com". After clicking on the Domain Logger extension again, we can see that youtube entry has been removed from the table as shown in the "after" output.
