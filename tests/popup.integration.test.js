@@ -61,24 +61,5 @@ describe("deleteTabs", () => {
     expect(rows[2].textContent).toContain("4"); // 4 tabs with www.google.com
     expect(rows[3].textContent).toContain("twitter.com");
     expect(rows[3].textContent).toContain("1"); // 1 tab with twitter.com
-
-    /*chrome.tabs.query.mockImplementation((queryInfo, callback) => {
-      callback(tabs);
-    });*/
-
-    // Click on an existing domain
-    /* const clickEvent = new MouseEvent("click", {
-      bubbles: true,
-      cancelable: true,
-      view: window
-    });
-    const existingDomain = "https://www.google.com";
-    const existingTarget = document.createElement("div");
-    existingTarget.textContent = existingDomain;
-    document.body.appendChild(existingTarget);
-    existingTarget.dispatchEvent(clickEvent);
-  
-    // Check that chrome.tabs.remove is called
-    expect(chrome.tabs.remove).toHaveBeenCalled();*/
   });
 });
