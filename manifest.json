@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Domain Logger",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Your websites, number of tabs, and time spent on each!",
   "permissions": ["tabs"],
   "browser_action": {
