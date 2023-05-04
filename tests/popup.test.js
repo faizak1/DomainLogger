@@ -90,4 +90,33 @@ describe("test chrome tabs functionality", () => {
       }
     );
   });
+
+  test("deleteTabs SHOULD NOT call chrome.tabs.remove if NO matching tabs are found", () => {
+    jest.clearAllMocks(); // Reset all mock functions
+
+    // Create some tabs
+    const tabs = [
+      { id: 1, url: "https://www.google.com/" },
+      { id: 2, url: "https://www.amazon.com/" },
+      { id: 3, url: "https://www.facebook.com/" }
+    ];
+
+    chrome.tabs.query.mockImplementation((queryInfo, callback) => {
+      callback(tabs);
+    });
+
+    // Click on a non-existing domain
+    const clickEvent = new MouseEvent("click", {
+      bubbles: true,
+      cancelable: true,
+      view: window
+    });
+    const nonExistingDomain = "https://www.example.com";
+    const nonExistingTarget = document.createElement("div");
+    nonExistingTarget.textContent = nonExistingDomain;
+    document.body.appendChild(nonExistingTarget);
+    nonExistingTarget.dispatchEvent(clickEvent);
+
+    expect(chrome.tabs.remove).not.toHaveBeenCalled();
+  });
 });
